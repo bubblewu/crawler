@@ -1,0 +1,24 @@
+{
+    "topic":"domestic-search-log",
+    "timestamp":1531795096,
+    "project":"search",
+    "source":"120.133.0.203",
+    "handler":[
+        "logdata",
+        "alarm"
+    ],
+    "content":{
+        "type":"log",
+        "name":"domestic-search-log",
+        "value":{
+            "minprice":"769/V/aqair-web-domestic/m1_aqair-api-domestic/m1_qunar-api-domestic/",
+            "redis":"41-56",
+            "ret":"0",
+            "datetime":"2018-07-17 10:38:16",
+            "cost":"4168",
+            "query":"analyseSourceEntry=ticketmain&date=2018-07-28&dst=HRB&from=hbgj&org=NKG&st=2&traceid=948f2bfe1af0a5e0&trip=OW&uid=387845847894144&userid=20911946&userinfo={"vipgrade":0,"crop":0}",
+            "total":"16",
+            "crawl":"newibe:0/2/3848/,fp:0/16/8/,api_jixair-api-domesticasync:1/0/22/,api_justravel-api-domesticasync:1/0/22/,api_xmair-api-domesticasync:1/0/22/,api_hnair-web-domesticasync:0/0/8/,policy:0/82/171/,"
+        }
+    }
+}
