@@ -9,6 +9,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.nio.file.Files;
 import java.nio.file.Paths;
+import java.nio.file.StandardOpenOption;
 import java.util.List;
 
 /**
@@ -40,11 +41,12 @@ public class FileUtils {
     /**
      * 将内容写入文件
      *
-     * @param path    文件
+     * @param path    文件(如不存在，则自动创建)
      * @param content 内容
+     * @param append  是否追加写入
      */
-    public static void writer(String path, String content) {
-        writer(path, content.getBytes());
+    public static void writer(String path, String content, boolean append) {
+        writer(path, content.getBytes(), append);
     }
 
     /**
@@ -52,10 +54,15 @@ public class FileUtils {
      *
      * @param path     文件
      * @param contents 内容
+     * @param append   是否追加写入
      */
-    public static void writer(String path, byte[] contents) {
+    public static void writer(String path, byte[] contents, boolean append) {
         try {
-            Files.write(Paths.get(path), contents);
+            if (append) {
+                Files.write(Paths.get(path), contents, StandardOpenOption.APPEND);
+            } else {
+                Files.write(Paths.get(path), contents);
+            }
         } catch (IOException e) {
             LOGGER.error("writer in file [{}] error.", path);
             throw new FileProcessingException("write in file error.", e);

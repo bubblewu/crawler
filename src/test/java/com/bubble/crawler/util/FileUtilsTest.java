@@ -33,4 +33,11 @@ public class FileUtilsTest {
         FileUtils.read("/Users/wugang/workspace/crawler/.gitignore").forEach(System.out::println);
     }
 
+    @Test
+    public void testWriter() {
+        boolean append = true;
+        String content = "测试写入文件";
+        FileUtils.writer("/Users/wugang/workspace/crawler/src/test/java/com/bubble/crawler/util/test.txt", content, append);
+    }
+
 }
