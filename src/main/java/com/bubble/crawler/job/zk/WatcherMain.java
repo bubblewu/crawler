@@ -15,7 +15,7 @@ import org.slf4j.LoggerFactory;
 import java.util.List;
 
 /**
- * 监视器
+ * 任务监视器：爬虫任务采用了临时ZNode的模式，如挂掉会自动删除该目录节点
  *
  * @author wugang
  * date: 2020-04-02 17:17
@@ -90,7 +90,7 @@ public class WatcherMain implements Watcher {
     public static void main(String[] args) throws InterruptedException {
         WatcherMain configWatcher = new WatcherMain();
         configWatcher.monitor();
-        Thread.sleep(Long.MAX_VALUE);//然后一直监控
+        Thread.sleep(Long.MAX_VALUE); // 一直监控
     }
 
 }
