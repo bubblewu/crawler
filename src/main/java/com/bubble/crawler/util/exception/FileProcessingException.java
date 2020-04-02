@@ -1,4 +1,4 @@
-package com.bubble.crawler;
+package com.bubble.crawler.util.exception;
 
 /**
  * 文件处理异常

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Configuration status="ERROR" monitorInterval="30">
     <Properties>
-        <Property name="LOG_HOME">/Users/wugang/data/logs/crawler</Property>
+        <Property name="LOG_HOME">./logs</Property>
     </Properties>
 
     <Appenders>

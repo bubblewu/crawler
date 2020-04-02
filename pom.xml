@@ -28,6 +28,14 @@
         <fastjson.version>1.2.47</fastjson.version>
         <dom4j.version>1.6.1</dom4j.version>
         <jedis.version>2.7.2</jedis.version>
+
+        <httpclient.version>4.5.12</httpclient.version>
+        <htmlcleaner.version>2.23</htmlcleaner.version>
+        <jsoup.version>1.13.1</jsoup.version>
+        <quartz.version>2.3.2</quartz.version>
+        <curator.version>4.3.0</curator.version>
+        <mail.version>1.4.7</mail.version>
+        <commons-email.version>1.4</commons-email.version>
     </properties>
 
     <dependencies>
@@ -129,16 +137,53 @@
             <version>${jedis.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.apache.httpcomponents</groupId>
+            <artifactId>httpclient</artifactId>
+            <version>${httpclient.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>net.sourceforge.htmlcleaner</groupId>
+            <artifactId>htmlcleaner</artifactId>
+            <version>${htmlcleaner.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>${jsoup.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.quartz-scheduler</groupId>
+            <artifactId>quartz</artifactId>
+            <version>${quartz.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.curator</groupId>
+            <artifactId>curator-framework</artifactId>
+            <version>${curator.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>javax.mail</groupId>
+            <artifactId>mail</artifactId>
+            <version>${mail.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.commons</groupId>
+            <artifactId>commons-email</artifactId>
+            <version>${commons-email.version}</version>
+        </dependency>
+
+
     </dependencies>
 
     <build>
-        <resources>
-            <resource>
-                <directory>src/main/resources_</directory>
-                <targetPath>resources</targetPath>
-            </resource>
-        </resources>
-        <sourceDirectory>src/main/scala</sourceDirectory>
+<!--        <resources>-->
+<!--            <resource>-->
+<!--                <directory>src/main/resources</directory>-->
+<!--                <targetPath>resources</targetPath>-->
+<!--            </resource>-->
+<!--        </resources>-->
+<!--        <sourceDirectory>src/main/java</sourceDirectory>-->
         <testSourceDirectory>src/test/scala</testSourceDirectory>
         <plugins>
             <plugin>
@@ -162,22 +207,6 @@
                         <phase>package</phase>
                         <goals>
                             <goal>single</goal>
-                        </goals>
-                    </execution>
-                </executions>
-            </plugin>
-            <!-- 这是个编译scala代码的 -->
-            <plugin>
-                <groupId>net.alchim31.maven</groupId>
-                <artifactId>scala-maven-plugin</artifactId>
-                <version>${scala.maven.plugin.version}</version>
-                <executions>
-                    <execution>
-                        <id>scala-compile-first</id>
-                        <phase>process-resources</phase>
-                        <goals>
-                            <goal>add-source</goal>
-                            <goal>compile</goal>
                         </goals>
                     </execution>
                 </executions>

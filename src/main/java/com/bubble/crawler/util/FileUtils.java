@@ -1,6 +1,6 @@
 package com.bubble.crawler.util;
 
-import com.bubble.crawler.FileProcessingException;
+import com.bubble.crawler.util.exception.FileProcessingException;
 import org.apache.commons.io.IOUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
