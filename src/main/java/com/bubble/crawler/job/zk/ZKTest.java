@@ -1,5 +1,9 @@
 package com.bubble.crawler.job.zk;
 
+import org.apache.curator.framework.CuratorFramework;
+import org.apache.curator.framework.CuratorFrameworkFactory;
+import org.apache.curator.framework.recipes.locks.InterProcessMutex;
+import org.apache.curator.retry.RetryNTimes;
 import org.apache.zookeeper.*;
 import org.apache.zookeeper.data.Stat;
 import org.junit.Before;
@@ -83,6 +87,18 @@ public class ZKTest {
         // 判断znode是否存在
         Stat stat = zkClient.exists("/test", false);
         System.out.println(stat == null ? "not exist" : "exist");
+    }
+
+    // 基于Curator的分布式锁实现
+    public void distributeLock() throws Exception {
+        CuratorFramework client = CuratorFrameworkFactory.newClient(
+                servers,
+                new RetryNTimes(10, 5000)
+        );
+        InterProcessMutex lock = new InterProcessMutex(client, "/locks/my_lock");
+        lock.acquire(); // 加锁
+        // 业务 ...
+        lock.release(); // 释放锁
     }
 
 }
