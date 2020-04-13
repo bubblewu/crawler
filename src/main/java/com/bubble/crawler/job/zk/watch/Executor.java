@@ -10,6 +10,8 @@ import java.io.*;
 /**
  * 实现Watcher接口，接收ZNode的变化通知
  * 执行：./executor.sh localhost:2181 /watch data/znode-data seq.sh
+ * - 执行后，zk上新建create /watch hello 路径，会打印Starting child，再就会触发程序执行seq.sh脚本的打印输出；
+ * - 如删除 delete /watch路径，程序会将上面的打印进程删掉，输出：Killing handle
  *
  * @author wugang
  * date: 2020-04-13 18:56
