@@ -5,6 +5,7 @@ import org.apache.curator.framework.CuratorFramework;
 import org.apache.curator.framework.CuratorFrameworkFactory;
 import org.apache.curator.framework.recipes.locks.InterProcessMutex;
 import org.apache.curator.retry.ExponentialBackoffRetry;
+import org.apache.zookeeper.CreateMode;
 
 /**
  * 基于Curator框架的分布式锁案例
@@ -25,6 +26,12 @@ public class CuratorLockDemo {
                 .build();
         //3 开启连接
         cf.start();
+//        try {
+//            // 异步创建
+//            cf.create().withMode(CreateMode.PERSISTENT).inBackground().forPath("/test", "haha".getBytes());
+//        } catch (Exception e) {
+//            e.printStackTrace();
+//        }
 
         // 4 锁构建
         // 传入一个根节点，在获取锁的时候，会在这个根节点下面做一些操作
