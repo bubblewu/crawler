@@ -29,7 +29,7 @@
         <dom4j.version>1.6.1</dom4j.version>
         <jedis.version>2.7.2</jedis.version>
 
-        <httpclient.version>4.5.12</httpclient.version>
+        <httpclient.version>4.5.13</httpclient.version>
         <htmlcleaner.version>2.23</htmlcleaner.version>
         <jsoup.version>1.13.1</jsoup.version>
         <quartz.version>2.3.2</quartz.version>
