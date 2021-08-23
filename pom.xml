@@ -31,7 +31,7 @@
 
         <httpclient.version>4.5.12</httpclient.version>
         <htmlcleaner.version>2.23</htmlcleaner.version>
-        <jsoup.version>1.13.1</jsoup.version>
+        <jsoup.version>1.14.2</jsoup.version>
         <quartz.version>2.3.2</quartz.version>
         <curator.version>4.3.0</curator.version>
         <mail.version>1.4.7</mail.version>
