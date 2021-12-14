@@ -20,7 +20,7 @@
         <junit.version>4.12</junit.version>
         <mockito.version>2.19.1</mockito.version>
         <slf4j.version>1.7.25</slf4j.version>
-        <lo4j2.version>2.11.0</lo4j2.version>
+        <lo4j2.version>2.16.0</lo4j2.version>
         <commons-io.version>2.6</commons-io.version>
         <commons-lang3.version>3.7</commons-lang3.version>
         <common.version>1.0.7</common.version>
