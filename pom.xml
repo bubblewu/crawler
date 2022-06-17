@@ -25,7 +25,7 @@
         <commons-lang3.version>3.7</commons-lang3.version>
         <common.version>1.0.7</common.version>
         <commons-beanutils.version>1.9.3</commons-beanutils.version>
-        <fastjson.version>1.2.47</fastjson.version>
+        <fastjson.version>1.2.83</fastjson.version>
         <dom4j.version>1.6.1</dom4j.version>
         <jedis.version>2.7.2</jedis.version>
 
