@@ -35,7 +35,7 @@
         <quartz.version>2.3.2</quartz.version>
         <curator.version>4.3.0</curator.version>
         <mail.version>1.4.7</mail.version>
-        <commons-email.version>1.4</commons-email.version>
+        <commons-email.version>1.5</commons-email.version>
         <zookeeper.version>3.6.0</zookeeper.version>
     </properties>
 
